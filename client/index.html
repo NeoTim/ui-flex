@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Live Reload</title>
+
+  <!-- build:css -->
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- inject:css -->
+  <link rel="stylesheet" href="app/app.css">
+  <link rel="stylesheet" href="app/styl.css">
+  <!-- endinject -->
+
+</head>
+<body class="bg-grey">
+  <main class="Flexer bg-white">
+
+
+    <header class="flex-header bg-blue"></header>
+    <div class="flex-body bg-grey">
+
+
+      <main class="flex-main bg-grey-400">
+          <header class="flex-header bg-blue-300 flex-toggle-close" data-toggle="aside" data-target="aside-left"></header>
+          <section class="flex-body bg-grey-400">
+            <section class="flex-main bg-gray-200"></section>
+            <aside class="flex-aside-left-sm fold-lg bg-grey-300">
+              <header class="flex-header bg-blue-200"></header>
+              <main class="flex-main"></main>
+              <footer class="flex-footer bg-red-200"></footer>
+            </aside>
+            <aside class="flex-aside-right-sm fold-lg order-1 bg-grey-300">
+              <header class="flex-header bg-blue-200"></header>
+              <main class="flex-main"></main>
+              <footer class="flex-footer bg-red-200"></footer>
+            </aside>
+          </section>
+          <footer class="flex-footer bg-red-300">
+      </main>
+
+      <aside id="aside-left" class="flex-aside-left fold-md bg-grey-200">
+        <header class="flex-header bg-blue-400 flex-toggle-fold" data-toggle="aside" data-target="aside-left"></header>
+        <section class="flex-body"></section>
+        <footer class="flex-footer bg-red-400"></footer>
+      </aside>
+
+      <aside class="flex-aside-right fold-md bg-grey-200">
+        <header class="flex-header bg-blue-400"></header>
+        <section class="flex-body"></section>
+        <footer class="flex-footer bg-red-400"></footer>
+      </aside>
+    </div>
+    <footer class="flex-footer bg-red"></footer>
+
+  </main>
+
+  <!-- build:js -->
+  <!-- bower:js -->
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- inject:js -->
+  <script src="app/app.js"></script>
+  <!-- endinject -->
+</body>
+</html>
+

@@ -1,0 +1,168 @@
+
+@import 'vars'
+@import 'mixins'
+@import 'base'
+@import 'colors'
+@import 'grail'
+@import 'components/main'
+@import 'components/body'
+@import 'components/header'
+@import 'components/aside'
+@import 'components/footer'
+
+body
+  display flex
+  min-height 100vh
+  flex-direction column
+  flex-wrap nowrap
+
+.Flexer
+  box-sizing border-box
+  position relative
+  flex 1
+  min-height inherit
+  display flex
+  flex-direction column
+
+
+
+.flex-column
+  box-sizing border-box
+  position relative
+  display flex
+  flex 1
+  flex-direction column
+  flex-wrap nowrap
+  box-orient vertical
+  box-pack start
+
+
+.flex-row
+  box-sizing border-box
+  display flex
+  flex 1
+  // justify-content flex-start
+  flex-direction row
+  flex-wrap wrap
+
+.flex
+  flex 1 0 auto
+
+.wrap-row
+  flex-wrap row wrap
+.wrap-column
+  flex-wrap column wrap
+
+.wrap-no
+  flex-wrap nowrap
+
+.wrap-column-reverse
+  flex-wrap column wrap
+.wrap-row-reverse
+  flex-wrap row wrap
+
+.justify-end
+  justify-content flex-end
+.justify-center
+  justify-content center
+.justify-start
+  justify-content flex-start
+
+.align-content-end
+  align-content flex-end
+
+.align-items-end
+  align-items flex-end
+
+.align-end
+  align-self flex-end
+.align-center
+  align-self center
+.align-start
+  align-self flex-start
+.align-stretch
+  align-self stretch
+
+
+for order in $flex-orders
+  .order-{order}
+    order order
+  .order-n-{order}
+    order (0 - order)
+
+get-size(index)
+  flex 0 0 unit( (100%/12*index) , '%')
+
+get-size-and-offset(index, val)
+  margin-left unit( (100%/12*val) , '%')
+  flex 0 0 unit( (100%/12*index) , '%')
+
+
+
+
+
+build-grid-offsets(size, index, offset, breakpoint)
+  .flex-column > .flex-{offset}--{index},
+  .flex-column > .flex-{size}-{offset}--{index}
+    flex index 0 auto
+
+  .flex-{offset}--{index}
+    box-sizing border-box
+    get-size(12)
+    @media(min-width $breakpoint-sm)
+      get-size-and-offset(index, offset)
+
+  if size is not xs
+    .flex-{size}-{offset}--{index}
+      get-size(12)
+  else
+    .flex-{size}-{offset}--{index}
+      get-size-and-offset(index, offset)
+
+  .flex-{size}-{offset}--{index}
+    box-sizing border-box
+    @media(min-width breakpoint)
+      get-size-and-offset(index, offset)
+
+
+build-grid(size, index, breakpoint)
+  .flex-column > .flex-{index},
+  .flex-column > .flex-{size}-{index}
+    flex index 0 (100% / 12 * index)
+
+
+
+  .flex-{index}
+    box-sizing border-box
+    get-size(12)
+    @media(min-width $breakpoint-sm)
+      get-size(index)
+
+  if size is not xs
+    .flex-{size}-{index}
+      get-size(12)
+  else
+    .flex-{size}-{index}
+      get-size(index)
+
+  .flex-{size}-{index}
+    box-sizing border-box
+    @media(min-width breakpoint)
+      get-size(index)
+
+for index in 1..12
+  build-grid(xs, index, $breakpoint-xs)
+  build-grid(sm, index, $breakpoint-sm)
+  build-grid(md, index, $breakpoint-md)
+  build-grid(lg, index, $breakpoint-lg)
+  build-grid(xl, index, $breakpoint-huge)
+
+  for offset in 1..12
+    build-grid-offsets(xs, index, offset, $breakpoint-xs)
+    build-grid-offsets(sm, index, offset, $breakpoint-sm)
+    build-grid-offsets(md, index, offset, $breakpoint-md)
+    build-grid-offsets(lg, index, offset, $breakpoint-lg)
+    build-grid-offsets(xl, index, offset, $breakpoint-huge)
+
+
+
