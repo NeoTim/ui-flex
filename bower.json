@@ -1,6 +1,6 @@
 {
   "name": "ng-flex",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": [
     "dist/ng-flex.js",
     "dist/ng-flex.css"
