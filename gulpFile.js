@@ -29,7 +29,7 @@ var paths = {
 
 
 gulp
-  .task('default', $.sequence('bower', 'stylus', 'inject', 'server', 'watch'))
+  .task('default', $.sequence('bower:dev', 'stylus:dev', 'inject:dev', 'server:dev', 'watch:dev'))
   .task('server:dev', startServer)
   .task('watch:dev', startWatch)
   .task('inject:dev', startInject)
