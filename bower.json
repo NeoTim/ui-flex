@@ -2,8 +2,8 @@
   "name": "ng-flex",
   "version": "0.0.2",
   "main": [
-    "dist/ngFlex.js",
-    "dist/ngFlex.css"
+    "dist/ng-flex.js",
+    "dist/ng-flex.css"
   ],
   "authors": [
     "joelcoxokc <joelcox@hisimagination.com>"
