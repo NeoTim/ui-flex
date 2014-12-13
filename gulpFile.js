@@ -6,16 +6,6 @@
 
 
 
-
-gulp.task('default', function(){
-  this.storage.create('hello', 'thing.json')
-
-  this.stroage.store()
-})
-
-
-
-
 var paths = {
   index: './client/index.html',
   root: './client',
@@ -51,7 +41,7 @@ function startWatch(){
   // gulp.watch('./client/app/**/*.css', $.livereload.changed);
   gulp.watch('./client/app/**/*.js', $.livereload.changed);
   gulp.watch('./client/**/*.html', $.livereload.changed);
-  gulp.watch(['./client/app/styles/**/*.styl', './client/app/styles'], ['stylus', $.livereload.changed])
+  gulp.watch(['./client/app/styles/**/*.styl', './client/app/styles'], ['stylus:dev', $.livereload.changed])
 }
 
 function startStylus(){
