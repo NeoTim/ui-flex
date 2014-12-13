@@ -1509,7 +1509,7 @@ body {
   flex-direction: column;
   flex-wrap: nowrap;
 }
-.Flexer {
+.ui-flex {
   box-sizing: border-box;
   position: relative;
   flex: 1;

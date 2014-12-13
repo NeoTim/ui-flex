@@ -27,20 +27,21 @@ If your css requires that you modify the defaults for HTML elements, then dont't
 
 ##Usage
 
-Immediately after the ```<body>``` tag create an element with the Flexer Class.
-**DO NOT PLACE *.Flexer* ON THE BODY**
+Immediately after the ```<body>``` tag create an element with 
+the `.ui-flex` Class.
+**DO NOT PLACE *.ui-flex* ON THE BODY**
     *- It will not work. *
 
 **Example**
 ```html
 <html>
     <body>
-        <div class="Flexer"></div>
+        <div class="ui-flex"></div>
     </body>
 </html>
 ```
 
-The *.Flexer* class creates a flex-column layout. 
+The *.ui-flex* class creates a flex-column layout. 
 within this class you can create the following elements
 
 >flex-column: One collum contains many rows
@@ -64,7 +65,7 @@ within this class you can create the following elements
 
 **Example**
 ```html
-<div class="Flexer">
+<div class="ui-flex">
     <header class="flex-header"></header>
     <section class="flex-body"></section>
     <footer class="flex-footer"></footer>
@@ -96,7 +97,7 @@ That said. . .  We can flex two asides for sidebars, and a main area for the cen
 
 **Example**
 ```html
-<div class="Flexer">
+<div class="ui-flex">
     <header class="flex-header"></header>
     <section class="flex-body">
     <!-- Start Example -->
