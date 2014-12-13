@@ -1,8 +1,6 @@
-# ng-flex
+# ui-flex
 
-#Under Development
-
-> The anguar version on [ui-flex](http://github.com/joelcoxokc/ui-flex)
+> A CSS Library with built in grid using display:flex
 
 
 ##Instalation
