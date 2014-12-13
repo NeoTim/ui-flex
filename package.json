@@ -1,8 +1,8 @@
 {
-  "name": "ng-flex",
-  "version": "0.0.0",
+  "name": "ui-flex",
+  "version": "0.0.1",
   "description": "",
-  "main": ["dist/ng-flex.js", "dist/ng-flex.css"],
+  "main": ["dist/ui-flex.js", "dist/ui-flex.css"],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp"

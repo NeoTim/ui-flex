@@ -73,12 +73,12 @@ function startBower(){
 function distStylus(){
   return gulp.src(paths.stylus)
     .pipe($.stylus())
-    .pipe($.concat('ng-flex.css') )
+    .pipe($.concat('ui-flex.css') )
     .pipe(gulp.dest( paths.dist ))
 }
 function distScripts(){
   return gulp.src(paths.scripts)
-    .pipe($.concat('ng-flex.js'))
+    .pipe($.concat('ui-flex.js'))
     .pipe(gulp.dest( paths.dist ))
 }
 

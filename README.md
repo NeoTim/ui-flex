@@ -3,10 +3,16 @@
 > A CSS Library with built in grid using display:flex
 
 
-##Instalation
+##Installation
 
 ```bash
-bower install --save ng-flex
+bower install --save ui-flex
+```
+
+Include the following in the `<head>` of your `<html>`
+
+```html
+<link rel="stylesheet" href="bower_components/ui-flex/dist/ui-flex.css">
 ```
 
 

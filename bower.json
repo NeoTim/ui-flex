@@ -2,8 +2,8 @@
   "name": "ui-flex",
   "version": "0.0.1",
   "main": [
-    "dist/ng-flex.js",
-    "dist/ng-flex.css"
+    "dist/ui-flex.js",
+    "dist/ui-flex.css"
   ],
   "authors": [
     "joelcoxokc <joelcox@hisimagination.com>"
