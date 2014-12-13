@@ -1,6 +1,6 @@
 {
   "name": "ui-flex",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": [
     "dist/ui-flex.js",
     "dist/ui-flex.css"

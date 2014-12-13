@@ -278,6 +278,7 @@ You can use `.flex-{offset}--{size}` like the following in order to center an el
 You can use `.flex-{media}-{offset}--{size}` like the following in order to center an element that is half the full width, even on a mobile screen
 
 **Example**
+
 ```html
 <section class="flex-row">
     <div class="flex-xs-3--6"></div>
@@ -289,6 +290,7 @@ You can use `.flex-{media}-{offset}--{size}` like the following in order to cent
 
 
 ##.flex-header
+
 ```
     flex 0 0 $header-height
     flex-direction: row
@@ -301,6 +303,7 @@ You can use `.flex-{media}-{offset}--{size}` like the following in order to cent
 
 
 ##.flex-body
+
 ```
     flex: 1 0 auto
     flex-direction: row
@@ -313,6 +316,7 @@ You can use `.flex-{media}-{offset}--{size}` like the following in order to cent
 
 
 ##.flex-footer
+
 ```
     flex: 0 0 $footer-height
     flex-direction: row
@@ -323,6 +327,27 @@ You can use `.flex-{media}-{offset}--{size}` like the following in order to cent
 
 ----------
 
+##.flex-main
+
+```
+    flex 1 0 auto
+    flex-direction column
+    display flex
+    order 0
+```
+
+----------
+
+##.flex-aside
+
+```
+    flex-basis $aside-width
+    flex-direction column
+    display flex
+    order -1
+```
+
+----------
 
 ##bg-colors
 
