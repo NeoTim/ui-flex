@@ -1,6 +1,6 @@
 {
-  "name": "ng-flex",
-  "version": "0.0.8",
+  "name": "ui-flex",
+  "version": "0.0.1",
   "main": [
     "dist/ng-flex.js",
     "dist/ng-flex.css"
@@ -14,7 +14,8 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "client/bower_components"
   ],
   "dependencies": {
     "jquery": "~2.1.1"
@@ -28,5 +29,5 @@
     "flex-box",
     "styles"
   ],
-  "homepage": "ng-Flex.azurewebsites.net"
+  "homepage": "ui-flex.azurewebsites.net"
 }
